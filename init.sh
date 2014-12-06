@@ -13,15 +13,32 @@ SEARCH_PATHS=".:/vagrant:$SCRIPT_COLLECTION_PATH"
 # <<< CONFIG
 
 
-### FUNCTION DEFINITIONS
+
+###
+# BASH OPTIONS
+##
+# any subsequent commands which fail (even in pipes) will cause the shell script to exit immediately
+set -o errexit
+set -o pipefail
+
+# any use of an uninitialised variable will cause the shell script to exit immediately
+set -o nounset
+
+
+
+###
+# FUNCTION DEFINITIONS
+##
 cleanup() {
     echo "### Cleaning up ###"
     rm -rf $SCRIPT_COLLECTION_PATH
 }
 
 
-### MAIN SCRIPT
 
+###
+# MAIN SCRIPT
+##
 echo "##### PROVISION INIT SCRIPT ($VERSION_TAG) #####"
 
 
@@ -41,6 +58,7 @@ fi
 
 # validate if all arguments are either valid local files or script collection aliases
 echo "### Validating arguments ###"
+SCRIPTS=
 for ARG in $@; do
 
     # argument is a local file in one of the search pathes (first match will be used)
