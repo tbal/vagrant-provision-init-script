@@ -22,9 +22,6 @@ STRING_FILE_LIST_SEPARATOR=":"
 set -o errexit
 set -o pipefail
 
-# any use of an uninitialised variable will cause the shell script to exit immediately
-set -o nounset
-
 
 
 ###
