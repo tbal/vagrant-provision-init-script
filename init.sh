@@ -105,7 +105,7 @@ SCRIPTS=${SCRIPTS:1}
 while read SCRIPT; do
 
     echo "##### Executing script: $SCRIPT #####"
-    /bin/chmod +x "$SCRIPT" && . "$SCRIPT"
+    /bin/chmod +x "$SCRIPT" && source "$SCRIPT"
 
 done < <(echo "$SCRIPTS" | tr $STRING_FILE_LIST_SEPARATOR "\n")
 
