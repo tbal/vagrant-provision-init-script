@@ -87,7 +87,7 @@ for ARG in "$@"; do
 
 
     # neither local file, nor alias => invalid argument
-    echo "ERROR: Invalid argument: $ARG"
+    echo "ERROR: Invalid argument: $ARG" 1>&2
     echo "##### Aborting #####"
     cleanup
     exit
