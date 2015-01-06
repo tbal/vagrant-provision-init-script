@@ -4,14 +4,15 @@
 VERSION_TAG="v0.2.1"
 
 
-# CONFIG >>>
+###
+# CONFIG
+##
 GIT_PACKAGE_NAME="git-core"
 SCRIPT_COLLECTION_GIT_REMOTE="https://github.com/tbal/vagrant-provision-script-collection.git"
 SCRIPT_COLLECTION_GIT_CLONE_ARGS="-b master --depth 1"
 SCRIPT_COLLECTION_PATH="/tmp/vagrant-provision-script-collection"
 SEARCH_PATHS=".:/vagrant:$SCRIPT_COLLECTION_PATH"
 STRING_FILE_LIST_SEPARATOR=":"
-# <<< CONFIG
 
 
 
