@@ -46,6 +46,7 @@ echo "##### PROVISION INIT SCRIPT ($VERSION_TAG) #####"
 # install git
 if [ ! `which git` ]; then
     echo "##### Installing git #####"
+    apt-get update > /dev/null
     apt-get install -qq "$GIT_PACKAGE_NAME"
 fi
 
