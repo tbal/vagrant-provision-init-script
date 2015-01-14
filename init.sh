@@ -66,6 +66,13 @@ echo "##### Validating arguments #####"
 SCRIPTS=
 for ARG in "$@"; do
 
+    # argument is a local file with absolute path
+    if [ -f "$ARG" ]; then
+        SCRIPTS="${SCRIPTS}${STRING_FILE_LIST_SEPARATOR}$ARG"
+        continue;
+    fi
+
+
     # argument is a local file in one of the search pathes (first match will be used)
     while read SEARCH_PATH; do
 
