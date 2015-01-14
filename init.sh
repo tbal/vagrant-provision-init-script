@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # adjust tag manually if you create a new git tag
-VERSION_TAG="v0.2.2"
+VERSION_TAG="v0.3.0"
 
 
 ###
