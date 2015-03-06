@@ -99,7 +99,7 @@ for ARG in "$@"; do
     echo "ERROR: Invalid argument: $ARG" 1>&2
     echo "##### Aborting #####"
     cleanup
-    exit
+    exit 1
 
 done
 
