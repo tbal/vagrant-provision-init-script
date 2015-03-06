@@ -43,6 +43,14 @@ echo "##### PROVISION INIT SCRIPT ($VERSION_TAG) #####"
 
 
 
+# if called without arguments, we got nothing todo and can exit here
+if [ $# -eq 0 ]; then
+    echo "##### No arguments given. There is nothing to do for me. Bye! #####"
+    exit 0
+fi
+
+
+
 # install git
 if [ ! `which git` ]; then
     echo "##### Installing git #####"
